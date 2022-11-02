@@ -1,6 +1,6 @@
-window.onload = function() {
+window.addEventListener("load", function() {
   let form = document.querySelector("form");
-  form.onsubmit = function(event) {
+  form.addEventListener("submit", function(event) {
 
     const person1Input= document.getElementById("person1Input").value;
     const person2Input= document.getElementById("person2Input").value;
@@ -15,14 +15,14 @@ window.onload = function() {
     document.querySelector("span#person2a").innerText= person2Input;
     document.querySelector("span#person2b").innerText= person2Input;
     document.querySelector("span#animal").innerText= animalInput;
-    document.querySelector("sapn#verb").innerText= verbInput;
+    document.querySelector("span#verb").innerText= verbInput;
     document.querySelector("span#noun").innerText= nounInput;
     document.querySelector("span#exclamation").innerText= exclamationInput;
 
     document.querySelector("div#story").removeAttribute("class");
 
     event.preventDefault();
-    };
-};
+    });
+});
 
 
